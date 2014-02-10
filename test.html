@@ -5,8 +5,8 @@
         <title>Pulaski Test Page</title>
         <script type="text/javascript" src="lib/pulaski.js"></script>
         <script type="text/javascript">
+            var instance = new Pulaski.Instance();
             function testConnect() {
-                var instance = new Pulaski.Instance();
                 instance.ping(function (err, res) {
                     alert([err, res]);
                 });
