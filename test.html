@@ -11,6 +11,11 @@
                     alert([err, res]);
                 });
             }
+            window.setInterval(function () {
+                instance.volume(function (err, res) {
+                    document.getElementById("volume").innerHTML = res.volume;
+                });
+            }, 2000);
         </script>
     </head>
     <body>
@@ -25,6 +30,9 @@
         <button onclick="instance.playpause()">Play/Pause</button>
         <button onclick="instance.play()">Play</button>
         <button onclick="instance.pause()">Pause</button>
+        </p>
+        <p>
+        <span id="volume">?</span>
         </p>
     </body>
 </html>
