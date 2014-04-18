@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tomahawk Remote Control</title>
+
+        <!-- Sets initial viewport load and disables zooming  -->
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!-- Include the compiled Ratchet CSS -->
+        <link href="bower_components/ratchet/dist/css/ratchet.min.css" rel="stylesheet">
+
+        <!-- Include the compiled Ratchet JS -->
+        <script src="bower_components/ratchet/dist/js/ratchet.min.js"></script>
+
+        <!-- Include Pulaski -->
+        <script type="text/javascript" src="pulaski.js"></script>
+        <script type="text/javascript">
+            var pulaski = new Pulaski.Instance();
+        </script>
+
+        <!-- Include custom styles -->
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Make sure all your bars are the first things in your <body> -->
+            <header class="bar bar-nav">
+            <h1 class="title">Tomahawk</h1>
+            </header>
+
+            <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+            <div class="content">
+            </div>
+
+            <div class="bar bar-standard bar-footer-secondary" style="min-height: 60px; padding-top:3px;text-align:center">
+                <span class="icon icon-btn icon-back"></span>
+                <span class="icon icon-play icon-btn" onclick="pulaski.playpause()"></span>
+                <span class="icon icon-btn icon-forward"></span>
+            </div>
+
+            <nav class="bar bar-tab">
+            <a class="tab-item active" href="#">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">Home</span>
+            </a>
+            <a class="tab-item" href="#">
+                <span class="icon icon-gear"></span>
+                <span class="tab-label">Settings</span>
+            </a>
+            </nav>
+
+        </body>
+    </html>

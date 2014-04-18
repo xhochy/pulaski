@@ -1,0 +1,27 @@
+{
+  "name": "tomahawk-ratchet-remote",
+  "version": "0.10",
+  "homepage": "https://github.com/xhochy/pulaski",
+  "authors": [
+    "Uwe L. Korn <uwelk@xhochy.com>"
+  ],
+  "description": "HTML5 mobile remote control for Tomahawk Player",
+  "main": "index.html",
+  "keywords": [
+    "tomahawk",
+    "remote",
+    "control"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ratchet": "~2.0.1"
+  }
+}
