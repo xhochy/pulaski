@@ -21,6 +21,18 @@
         <script type="text/javascript" src="pulaski.js"></script>
         <script type="text/javascript">
             var pulaski = new Pulaski.Instance();
+
+            window.setInterval(function () {
+                // Regulary update the current playing information
+                pulaski.currentTrack(function (err, res) {
+                    if (res.playing) {
+                        console.log(res);
+                    } else {
+                        document.getElementById("contentbox").innerHTML = '<br /><h4 style="text-align: center">Paused</h4>';
+                    }
+                    // document.getElementById("volume").innerHTML = res.volume;
+                });
+            }, 2000);
         </script>
 
         <!-- Include custom styles -->
@@ -34,7 +46,9 @@
             </header>
 
             <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-            <div class="content">
+            <div class="content" id="contentbox">
+
+                <div id="track-title">&nbsp;</div>
             </div>
 
             <div class="bar bar-standard bar-footer-secondary" style="min-height: 60px; padding-top:3px;text-align:center">
